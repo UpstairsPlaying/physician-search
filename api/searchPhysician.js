@@ -7,8 +7,9 @@ module.exports = async (req, res) => {
   }
 
   try {
-    // Replace 'api.example.com' with your actual physician data API
-    const response = await axios.get(`https://api.example.com/physicians?name=${encodeURIComponent(name)}`);
+    const apiUrl = `https://api.example.com/physicians?name=${encodeURIComponent(name)}`;
+    console.log(`Requesting URL: ${apiUrl}`);
+    const response = await axios.get(apiUrl);
     res.status(200).json(response.data);
   } catch (error) {
     console.error(error);
