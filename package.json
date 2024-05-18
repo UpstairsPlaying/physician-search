@@ -1,0 +1,11 @@
+{
+  "name": "physician-search",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}
