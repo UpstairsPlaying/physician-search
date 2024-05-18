@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Physician Search Plugin",
+  "name_for_model": "physician_search",
+  "description_for_human": "Search for physician data.",
+  "description_for_model": "Plugin for searching physician data by name.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "/openapi.yaml"
+  },
+  "logo_url": "/logo.png",
+  "contact_email": "support@example.com",
+  "legal_info_url": "http://example.com/legal"
+}
