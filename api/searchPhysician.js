@@ -7,12 +7,15 @@ module.exports = async (req, res) => {
   }
 
   try {
-    const apiUrl = `https://api.example.com/physicians?name=${encodeURIComponent(name)}`;
-    console.log(`Requesting URL: ${apiUrl}`);
-    const response = await axios.get(apiUrl);
-    res.status(200).json(response.data);
+    // Mock API response for demonstration
+    const mockResponse = {
+      name: name,
+      specialty: 'Cardiology',
+      location: 'New York'
+    };
+    res.status(200).json(mockResponse);
   } catch (error) {
-    console.error(error);
+    console.error('API error:', error.message);
     res.status(500).json({ error: 'Error fetching physician data' });
   }
 };
