@@ -14,7 +14,12 @@
   <script>
     async function searchPhysician() {
       const query = document.getElementById('query').value;
-      const response = await fetch(`/api/searchPhysician?name=${query}`);
+      const response = await fetch(`/api/searchPhysician?name=${encodeURIComponent(query)}`);
+      if (!response.ok) {
+        const error = await response.json();
+        document.getElementById('results').innerText = `Error: ${error.message}`;
+        return;
+      }
       const data = await response.json();
       document.getElementById('results').innerText = JSON.stringify(data, null, 2);
     }
